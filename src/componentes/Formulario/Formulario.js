@@ -84,8 +84,8 @@ const Formulario = () => {
         setPassword(e.target.value);
         if(e.target.value.length < 1) {
             setPasswordError("Campo obligatorio");
-        } else if(e.target.value.length < 3) {
-            setPasswordError("Escribe una contraseña");
+        } else if(e.target.value.length < 8) {
+            setPasswordError("La contraseña debe tener al menos 8 caracteres");
         } else {
             setPasswordError('');
         }
@@ -95,7 +95,7 @@ const Formulario = () => {
         setConfirmPassword(e.target.value);
         if(e.target.value !== Password) {
             setConfirmPasswordError("Las contraseñas no coiciden");
-        } else if(e.target.value.length < 3) {
+        } else if(e.target.value.length < 7) {
             setConfirmPasswordError("Las contraseñas no coiciden");
         } else {
             setConfirmPasswordError('');
